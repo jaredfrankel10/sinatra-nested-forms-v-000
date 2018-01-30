@@ -1,14 +1,17 @@
-form action="/pirates" method="post">
-   <h2>Pirate</h2>
-   <p>Name: <input type="text" name="pirate[name]"></p>
-   <p>Height: <input type="text" name="pirate[height]"></p>
-   <p>Weight: <input type="text" name="pirate[weight]"></p>
-   <h2>Ships</h2>
-   <p>Name: <input type="text" name="pirate[ships][][name]" id="ship_name_1"></p>
-   <p>Type: <input type="text" name="pirate[ships][][type]" id="ship_type_1"></p>
-   <p>Booty: <input type="text" name="pirate[ships][][booty]" id="ship_booty_1"></p>
-   <p>Name: <input type="text" name="pirate[ships][][name]"id="ship_name_2"></p>
-   <p>Type: <input type="text" name="pirate[ships][][type]"id="ship_type_2"></p>
-   <p>Booty: <input type="text" name="pirate[ships][][booty]" id="ship_booty_2"></p>
-   <input type="submit" name= "Submit" id= "Submit">
+<!DOCTYPE html>
+ <html>
+ <h1>Welcome to the Nested Forms Lab!</h1>
+ <form method="post" action="/pirates">
+ <p><label>Pirate Name:<input type="text" name="pirate[name]"> </label></p>
+ <p><label>Pirate Height:<input type="text" name="pirate[height]"> </label></p>
+ <p><label>Pirate Weight:<input type="text" name="pirate[weight]"> </label></p>
+ <p><label>First Ship Name:<input type="text" id="ship_name_1" name="pirate[ships][][name]"> </label></p>
+ <p><label>First Ship Type:<input type="text" id="ship_type_1" name="pirate[ships][][type]"> </label></p>
+ <p><label>First Ship Booty:<input type="text" id="ship_booty_1" name="pirate[ships][][booty]"> </label></p>
+ <p><label>Second Ship Name:<input type="text" id="ship_name_2" name="pirate[ships][][name]"> </label></p>
+ <p><label>Second Ship Type:<input type="text" id="ship_type_2" name="pirate[ships][][type]"> </label></p>
+ <p><label>Second Ship Booty:<input type="text" id="ship_booty_2" name="pirate[ships][][booty]"> </label></p>
+ <input id="Submit" type="submit">
+ 
  </form>
+ </html>
